@@ -1,0 +1,76 @@
+// using a graph traversing algorithm 
+// possibly djikstra's
+
+Certainly! There are several graph traversal algorithms, each with its own characteristics and use cases. Let's dive deeper into some of the most common graph traversal algorithms, beyond just breadth-first and depth-first traversal.
+
+### Breadth-First Traversal (BFS):
+
+BFS explores a graph level by level, visiting all the neighbors of a node before moving on to their children. It's implemented using a queue and ensures that nodes at the same level are visited before moving deeper.
+
+**Use Cases:**
+- Shortest path finding in unweighted graphs.
+- Finding connected components in an undirected graph.
+- Solving puzzles like the "15 Puzzle" or "8 Puzzle."
+
+### Depth-First Traversal (DFS):
+
+DFS explores a graph as deeply as possible along each branch before backtracking. It's implemented using recursion or a stack. DFS can be further categorized into three types:
+
+1. **Preorder DFS:** Process the current node, then recursively process its children.
+2. **Inorder DFS:** Recursively process the left child, then the current node, and finally the right child. This is more relevant to binary trees.
+3. **Postorder DFS:** Recursively process children, then process the current node.
+
+**Use Cases:**
+- Topological sorting of directed acyclic graphs (DAGs).
+- Solving mazes and finding paths.
+- Detecting cycles in a graph.
+
+### Depth-Limited Search (DLS):
+
+DLS is a variant of DFS where the search is limited to a specified depth. It helps prevent infinite loops in graphs with cycles.
+
+**Use Cases:**
+- Web crawling, where you want to limit the depth of traversal.
+- Games with limited depth of moves (e.g., chess).
+
+### Iterative Deepening Depth-First Search (IDDFS):
+
+IDDFS is a combination of BFS and DFS. It performs DFS with increasing depth limits, effectively simulating a BFS-like traversal while maintaining the memory efficiency of DFS.
+
+**Use Cases:**
+- Searching in game trees.
+- Memory-constrained systems where BFS may not be feasible.
+
+### Bidirectional Search:
+
+Bidirectional search simultaneously performs BFS from the start node and the goal node, meeting in the middle. It can significantly reduce the search space in some cases.
+
+**Use Cases:**
+- Shortest path finding when the start and goal nodes are known.
+- Solving puzzles by searching from both the initial and target states.
+
+### Dijkstra's Algorithm:
+
+Dijkstra's algorithm finds the shortest paths from a source node to all other nodes in a weighted graph. It maintains a priority queue to greedily select the next closest node.
+
+**Use Cases:**
+- Shortest path finding in non-negative weighted graphs.
+- Network routing and navigation applications.
+
+### A* Algorithm:
+
+A* combines the best aspects of Dijkstra's algorithm and greedy search. It uses a heuristic function to estimate the cost to reach the goal, guiding the search towards the goal while considering the cost.
+
+**Use Cases:**
+- Pathfinding in games and robotics.
+- GPS navigation systems.
+
+### Bellman-Ford Algorithm:
+
+Bellman-Ford finds the shortest paths from a single source node to all other nodes in a weighted graph, even if the graph contains negative-weight edges.
+
+**Use Cases:**
+- Shortest path finding in graphs with negative weight edges.
+- Detecting negative weight cycles.
+
+These are just a few examples of the many graph traversal algorithms available. Each algorithm has its own strengths and weaknesses, and the choice of which algorithm to use depends on the specific problem and graph characteristics you're dealing with.
