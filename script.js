@@ -1,22 +1,8 @@
-// const myForm = document.getElementById("myForm");
-//       const csvFile = document.getElementById("csvFile");
-//       myForm.addEventListener("submit", function (e) {
-//          e.preventDefault();
-//          const input = csvFile.files[0];
-//          const reader = new FileReader();
-//          reader.onload = function (e) {
-//             const text = e.target.result;
-//             document.write(text);
-//          };
-//          console.log(reader.readAsText(input));
-//       });
+const csvFileURL = "W:\0CODING\4Projects\2023\Ideas\DelhiMetro\Delhi-Metro\DELHI_METRO_DATA.csv"
 
-console.log("hello")
-const fs = require('fs');
-const csv = require('csvtojson');
-const {Parser} = require('json2csv');
-
-(async ()=>{
-   const data = await csv().fromFile("DELHI_METRO_DATA.csv");
-   console.log(data[0].Station);
-})();
+fetch(csvFileURL)
+.then(response=>response.text)
+.then(console.log(data))
+.catch((e)=>{
+   console.log(e)
+})
