@@ -235,3 +235,18 @@ const metroData = [
     ["Yamuna Bank", "Blue Line", 28.6232784, 77.26792404925054],
   ];
 
+const loginId = document.getElementById('loginId');
+loginId.addEventListener("submit",(e)=>{
+    e.preventDefault();
+
+    const userStart = document.getElementById('start').value;
+    const userDestination = document.getElementById('destination').value
+
+    // console.log(typeof metroData)
+
+    const userStartData = metroData[metroData.indexOf(metroData.find(arr => arr.includes(userStart)))]
+    const UserDestinationData = metroData[metroData.indexOf(metroData.find(arr=> arr.includes(userDestination)))]
+
+    console.log(userStartData)
+    console.log(UserDestinationData)
+})
